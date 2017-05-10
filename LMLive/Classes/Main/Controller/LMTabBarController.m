@@ -29,27 +29,27 @@
     
     [self addOneChildControllerToTabBar:homeController
                                   title:@"首页"
-                        normalImageName:@"tabBar_normal_home"
-                      selectedImageName:@"tabBar_selected_home"];
+                        normalImageName:@"btn_tabbar_home_normal"
+                      selectedImageName:@"btn_tabbar_home_selected"];
     
     //直播
     LMLiveViewController *liveController=[[LMLiveViewController alloc]init];
     [self addOneChildControllerToTabBar:liveController
                                   title:@"直播"
-                        normalImageName:@"tabBar_normal_live"
-                      selectedImageName:@"tabBar_selected_live"];
+                        normalImageName:@"btn_tabbar_guanzhu_normal"
+                      selectedImageName:@"btn_tabbar_guanzhu_selected"];
     //主播
     LMMyLiveViewController *myLiveController=[[LMMyLiveViewController alloc]init];
     [self addOneChildControllerToTabBar:myLiveController
                                   title:@"主播"
-                        normalImageName:@"tabBar_normal_mylive"
-                      selectedImageName:@"tabBar_selected_mylive"];
+                        normalImageName:@"btn_tabbar_zhibo_normal"
+                      selectedImageName:@"btn_tabbar_zhibo_selected"];
     //我的
     LMMineViewController *mineController=[[LMMineViewController alloc]init];
     [self addOneChildControllerToTabBar:mineController
                                   title:@"我的"
-                        normalImageName:@"tabBar_normal_mine"
-                      selectedImageName:@"tabBar_selected_mine"];
+                        normalImageName:@"btn_tabbar_wode_normal"
+                      selectedImageName:@"btn_tabbar_wode_selected"];
     
     
 

@@ -26,7 +26,7 @@
 		0F6EF3251EC204B4002AE345 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0F6EF3271EC204B4002AE345 /* LMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LMAppDelegate.h; path = ../../../LMAppDelegate.h; sourceTree = "<group>"; };
 		0F6EF3281EC204B4002AE345 /* LMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = LMAppDelegate.m; path = ../../../LMAppDelegate.m; sourceTree = "<group>"; };
-		0F6EF3301EC204B4002AE345 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../Assets.xcassets; sourceTree = "<group>"; };
+		0F6EF3301EC204B4002AE345 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F6EF3351EC204B4002AE345 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E264710D0EC7430FC2DAD1F /* Pods-LMLive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LMLive.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LMLive/Pods-LMLive.debug.xcconfig"; sourceTree = "<group>"; };
 		6A7A06871EC2BADA00B5791B /* LMTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMTabBarController.h; sourceTree = "<group>"; };
@@ -102,6 +102,7 @@
 		0F6EF3241EC204B4002AE345 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0F6EF3301EC204B4002AE345 /* Assets.xcassets */,
 				0F6EF3351EC204B4002AE345 /* Info.plist */,
 				0F6EF3251EC204B4002AE345 /* main.m */,
 			);
@@ -265,7 +266,6 @@
 			children = (
 				0F6EF3271EC204B4002AE345 /* LMAppDelegate.h */,
 				0F6EF3281EC204B4002AE345 /* LMAppDelegate.m */,
-				0F6EF3301EC204B4002AE345 /* Assets.xcassets */,
 				6A7A06901EC2BDF200B5791B /* LMPrefixHeader.pch */,
 				6A7A06911EC2BE5F00B5791B /* LMConnect.h */,
 				6A7A06921EC2BE7100B5791B /* LMConst.h */,

@@ -16,18 +16,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor=LMBlueColor;
+    
    
     
 }
--(void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
     [self loadTabBarController];
+
+
 
 }
 -(void)loadTabBarController{
     LMTabBarController *tabBarController=[[LMTabBarController alloc]init];
-    tabBarController.view.backgroundColor=LMGreenColor;
+    
     [UIApplication sharedApplication].keyWindow.rootViewController=tabBarController;
     [[UIApplication sharedApplication].keyWindow sendSubviewToBack:[UIApplication sharedApplication].keyWindow.rootViewController.view];
     
