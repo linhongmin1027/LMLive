@@ -83,7 +83,7 @@
     
     //添加到导航控制器
     LMNavigationViewController *naviController=[[LMNavigationViewController alloc]initWithRootViewController:controller];
-    
+    naviController.navigationBar.translucent=NO;
     [self addChildViewController:naviController];
     
 

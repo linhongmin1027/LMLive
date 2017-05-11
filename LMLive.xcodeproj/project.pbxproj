@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F3A8C271EC4B46D00C84379 /* LMSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F3A8C241EC4B46D00C84379 /* LMSegmentView.m */; };
+		0F3A8C281EC4B46D00C84379 /* LMHomeTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F3A8C251EC4B46D00C84379 /* LMHomeTitleView.m */; };
 		0F6EF3261EC204B4002AE345 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6EF3251EC204B4002AE345 /* main.m */; };
 		0F6EF3291EC204B4002AE345 /* LMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6EF3281EC204B4002AE345 /* LMAppDelegate.m */; };
 		0F6EF3311EC204B4002AE345 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F6EF3301EC204B4002AE345 /* Assets.xcassets */; };
@@ -22,6 +24,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F3A8C231EC4B46D00C84379 /* LMHomeTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMHomeTitleView.h; sourceTree = "<group>"; };
+		0F3A8C241EC4B46D00C84379 /* LMSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMSegmentView.m; sourceTree = "<group>"; };
+		0F3A8C251EC4B46D00C84379 /* LMHomeTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMHomeTitleView.m; sourceTree = "<group>"; };
+		0F3A8C261EC4B46D00C84379 /* LMSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMSegmentView.h; sourceTree = "<group>"; };
 		0F6EF3211EC204B4002AE345 /* LMLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LMLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F6EF3251EC204B4002AE345 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0F6EF3271EC204B4002AE345 /* LMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LMAppDelegate.h; path = ../../../LMAppDelegate.h; sourceTree = "<group>"; };
@@ -72,6 +78,38 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		0F3A8C211EC4B46400C84379 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0F3A8C231EC4B46D00C84379 /* LMHomeTitleView.h */,
+				0F3A8C251EC4B46D00C84379 /* LMHomeTitleView.m */,
+				0F3A8C241EC4B46D00C84379 /* LMSegmentView.m */,
+				0F3A8C261EC4B46D00C84379 /* LMSegmentView.h */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0F3A8C221EC4B46400C84379 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0F3A8C291EC4B4DE00C84379 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		0F3A8C2A1EC4B4DE00C84379 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
 		0F6EF3181EC204B4002AE345 = {
 			isa = PBXGroup;
 			children = (
@@ -112,54 +150,23 @@
 		6A7A066B1EC2BA7A00B5791B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				6A7A066C1EC2BA7A00B5791B /* Account */,
+				0F3A8C291EC4B4DE00C84379 /* Utility */,
+				0F3A8C2A1EC4B4DE00C84379 /* Account */,
 				6A7A06701EC2BA7A00B5791B /* Home */,
 				6A7A06741EC2BA7A00B5791B /* Live */,
 				6A7A06781EC2BA7A00B5791B /* Main */,
 				6A7A067E1EC2BA7A00B5791B /* Mine */,
 				6A7A06821EC2BA7A00B5791B /* MyLive */,
-				6A7A06861EC2BA7A00B5791B /* Utility */,
 			);
 			path = Classes;
-			sourceTree = "<group>";
-		};
-		6A7A066C1EC2BA7A00B5791B /* Account */ = {
-			isa = PBXGroup;
-			children = (
-				6A7A066D1EC2BA7A00B5791B /* Controller */,
-				6A7A066E1EC2BA7A00B5791B /* Model */,
-				6A7A066F1EC2BA7A00B5791B /* View */,
-			);
-			path = Account;
-			sourceTree = "<group>";
-		};
-		6A7A066D1EC2BA7A00B5791B /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		6A7A066E1EC2BA7A00B5791B /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		6A7A066F1EC2BA7A00B5791B /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		6A7A06701EC2BA7A00B5791B /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				0F3A8C211EC4B46400C84379 /* Views */,
+				0F3A8C221EC4B46400C84379 /* Model */,
 				6A7A06711EC2BA7A00B5791B /* Controller */,
-				6A7A06721EC2BA7A00B5791B /* Model */,
-				6A7A06731EC2BA7A00B5791B /* View */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -173,26 +180,10 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		6A7A06721EC2BA7A00B5791B /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		6A7A06731EC2BA7A00B5791B /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		6A7A06741EC2BA7A00B5791B /* Live */ = {
 			isa = PBXGroup;
 			children = (
 				6A7A06751EC2BA7A00B5791B /* Controller */,
-				6A7A06761EC2BA7A00B5791B /* Model */,
-				6A7A06771EC2BA7A00B5791B /* View */,
 			);
 			path = Live;
 			sourceTree = "<group>";
@@ -206,28 +197,12 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		6A7A06761EC2BA7A00B5791B /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		6A7A06771EC2BA7A00B5791B /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		6A7A06781EC2BA7A00B5791B /* Main */ = {
 			isa = PBXGroup;
 			children = (
 				6A7A06791EC2BA7A00B5791B /* Category */,
 				6A7A067A1EC2BA7A00B5791B /* Controller */,
-				6A7A067B1EC2BA7A00B5791B /* Model */,
 				6A7A067C1EC2BA7A00B5791B /* Others */,
-				6A7A067D1EC2BA7A00B5791B /* View */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -254,13 +229,6 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		6A7A067B1EC2BA7A00B5791B /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		6A7A067C1EC2BA7A00B5791B /* Others */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,19 +241,10 @@
 			path = Others;
 			sourceTree = "<group>";
 		};
-		6A7A067D1EC2BA7A00B5791B /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		6A7A067E1EC2BA7A00B5791B /* Mine */ = {
 			isa = PBXGroup;
 			children = (
 				6A7A067F1EC2BA7A00B5791B /* Controller */,
-				6A7A06801EC2BA7A00B5791B /* Model */,
-				6A7A06811EC2BA7A00B5791B /* View */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -299,26 +258,10 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		6A7A06801EC2BA7A00B5791B /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		6A7A06811EC2BA7A00B5791B /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		6A7A06821EC2BA7A00B5791B /* MyLive */ = {
 			isa = PBXGroup;
 			children = (
 				6A7A06831EC2BA7A00B5791B /* Controller */,
-				6A7A06841EC2BA7A00B5791B /* Model */,
-				6A7A06851EC2BA7A00B5791B /* View */,
 			);
 			path = MyLive;
 			sourceTree = "<group>";
@@ -330,27 +273,6 @@
 				6ABD5D001EC3139500CBD820 /* LMMyLiveViewController.m */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		6A7A06841EC2BA7A00B5791B /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		6A7A06851EC2BA7A00B5791B /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		6A7A06861EC2BA7A00B5791B /* Utility */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utility;
 			sourceTree = "<group>";
 		};
 		CA7F4C2D46107E0A0D9F2684 /* Pods */ = {
@@ -486,8 +408,10 @@
 				6A7A06891EC2BADA00B5791B /* LMTabBarController.m in Sources */,
 				6ABD5D041EC315BD00CBD820 /* LMNavigationViewController.m in Sources */,
 				6ABD5D011EC3139500CBD820 /* LMMyLiveViewController.m in Sources */,
+				0F3A8C281EC4B46D00C84379 /* LMHomeTitleView.m in Sources */,
 				6ABD5D071EC31C9500CBD820 /* UIView+LMAdd.m in Sources */,
 				0F6EF3291EC204B4002AE345 /* LMAppDelegate.m in Sources */,
+				0F3A8C271EC4B46D00C84379 /* LMSegmentView.m in Sources */,
 				6ABD5CF81EC3133400CBD820 /* LMHomeViewController.m in Sources */,
 				6ABD5CFE1EC3138300CBD820 /* LMMineViewController.m in Sources */,
 				6A7A068F1EC2BCD400B5791B /* LMLaunchViewController.m in Sources */,
