@@ -17,9 +17,12 @@
 @property(nonatomic, strong)NSMutableArray *sectionArray;
 
 @property(nonatomic, strong)NSMutableArray *dataArray;
+/**  滚动视图  */
+@property(nonatomic, strong)UIView *bannerView;
 @end
 
 static NSString * const RecommendCollectionSectionHeaderId=@"RecommendCollectionSectionHeaderId";
+static NSString * const RecommendCollectionSectionFirstHeaderId=@"RecommendCollectionSectionFirstHeaderId";
 
 static NSString * const RecommendCollectionCellId=@"RecommendCollectionCellId";
 
@@ -86,12 +89,13 @@ static NSString * const RecommendCollectionCellId=@"RecommendCollectionCellId";
         UICollectionViewFlowLayout *flowLayout=[[UICollectionViewFlowLayout alloc]init];
         flowLayout.itemSize=CGSizeMake((kScreenWidth-kWidth(30))*0.5, 0.2*kScreenHeight);
         flowLayout.scrollDirection=UICollectionViewScrollDirectionVertical;
-        UICollectionView *contrainCollectionView=[[UICollectionView alloc]initWithFrame:self.view.bounds collectionViewLayout:flowLayout];
+        UICollectionView *contrainCollectionView=[[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, self.view.frame.size.height-BtnListHeight) collectionViewLayout:flowLayout];
         contrainCollectionView.backgroundColor=LMWhiteColor;
         contrainCollectionView.delegate=self;
         contrainCollectionView.dataSource=self;
         
         //组头视图注册
+        [contrainCollectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:RecommendCollectionSectionFirstHeaderId];
         [contrainCollectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:RecommendCollectionSectionHeaderId];
         
         //cell注册
@@ -101,6 +105,19 @@ static NSString * const RecommendCollectionCellId=@"RecommendCollectionCellId";
         
     }
     return _contrainCollectionView;
+}
+#pragma mark  - 滚动视图
+-(UIView *)bannerView{
+    if (!_bannerView) {
+        UIView *bannerView=[[UIView alloc]init];
+        bannerView.backgroundColor=[UIColor redColor];
+        _bannerView=bannerView;
+    }
+    return _bannerView;
+
+
+
+
 }
 #pragma mark  - UICollectionViewDataSource
 
@@ -124,57 +141,153 @@ static NSString * const RecommendCollectionCellId=@"RecommendCollectionCellId";
 
 
 }
+#pragma mark  - 头视图的复用
 -(UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
     //头部视图
     if (kind ==UICollectionElementKindSectionHeader) {
-        
-        UICollectionReusableView *headView=[collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader  withReuseIdentifier:RecommendCollectionSectionHeaderId forIndexPath:indexPath];
-        //[self setupHeadView:headView atIndexPath:indexPath];
-        
-       
+        if (indexPath.section==0) {//有轮播图
+            UICollectionReusableView *headView=[collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader  withReuseIdentifier:RecommendCollectionSectionFirstHeaderId forIndexPath:indexPath];
+            
+            [self setupHeadView:headView atIndexPath:indexPath];
+            
+            return headView;
+            
+            
+        }else{
+            UICollectionReusableView *headView=[collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader  withReuseIdentifier:RecommendCollectionSectionHeaderId forIndexPath:indexPath];
+            
+            [self setupHeadView:headView atIndexPath:indexPath];
         
         return headView;
+        }
+        
+        
     }
     return nil;
-
-
-
-
 }
+
 //设置头视图的大小
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section{
+    if (section==0) {
+        return CGSizeMake(kScreenWidth, LMHomeSectionHeight+LMHomeBannerHeight);
+    }else{
+        return CGSizeMake(kScreenWidth, LMHomeSectionHeight);
+    }
     
-    return CGSizeMake(kScreenWidth, LMHomeSectionHeight);
+    
 }
 #pragma mark  - 设置边距
 -(UIEdgeInsets) collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 {
-    //距离边界位置
-    return UIEdgeInsetsMake(10, 10, 10,10);
+    //距离边界位置(上,右,下,左)
+    return UIEdgeInsetsMake(0, 10, 10,10);
 }
+
 #pragma mark  - 设置组的头视图
 -(void)setupHeadView:(UIView *)headView atIndexPath:(NSIndexPath *)indexPath{
-    LMHomeSectionModel *sectionModel=self.sectionArray[indexPath.section];
-    headView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, LMHomeSectionHeight)];
-    headView.backgroundColor=LMWhiteColor;
-    UILabel *titleLabel=[[UILabel alloc]init];
-    titleLabel.text=[NSString stringWithFormat:@"%@", sectionModel.name];
-    [headView addSubview:titleLabel];
-    UIButton *moreBtn=[[UIButton alloc]init];
-    [moreBtn setTitle:@"更多" forState:UIControlStateNormal];
-    [headView addSubview:moreBtn];
-    //布局
-    [headView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_offset(kWidth(10));
-        make.top.bottom.mas_offset(0);
-        make.width.mas_equalTo(0.5*kScreenWidth);
+    if (indexPath.section==0) {
+        LMHomeSectionModel *sectionModel=self.sectionArray[indexPath.section];
+        headView.backgroundColor=LMWhiteColor;
+        //滚动视图
+        [headView addSubview:self.bannerView];
+        //lineView
+        UIView *lineView=[[UIView alloc]init];
+        lineView.backgroundColor=LMLightColor;
+        [headView addSubview:lineView];
         
-    }];
-    [moreBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.mas_equalTo(10);
-        make.top.bottom.mas_offset(0);
-        make.width.mas_equalTo(kWidth(80));
-    }];
+        //标题
+        UILabel *titleLabel=[[UILabel alloc]init];
+        titleLabel.text=[NSString stringWithFormat:@"%@", sectionModel.name];
+        [headView addSubview:titleLabel];
+        UIButton *moreBtn=[[UIButton alloc]init];
+        //更多按钮
+        [moreBtn setTitle:@"更多" forState:UIControlStateNormal];
+        [moreBtn setTitleColor:LMLightGrayColor forState:UIControlStateNormal];
+        [headView addSubview:moreBtn];
+        
+        //布局
+        [self.bannerView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.left.right.mas_offset(0);
+            make.height.mas_equalTo(LMHomeBannerHeight);
+            
+        }];
+        [lineView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.bannerView.mas_bottom).mas_offset(0);
+            make.height.mas_equalTo(10);
+            make.left.right.mas_offset(0);
+            
+        }];
+        
+        
+        [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.mas_offset(kWidth(10));
+            make.top.equalTo(lineView.mas_bottom).mas_offset(0);
+            make.bottom.mas_offset(0);
+            make.width.mas_equalTo(0.5*kScreenWidth);
+            
+        }];
+        [moreBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.mas_equalTo(10);
+            make.bottom.mas_offset(0);
+            make.top.equalTo(lineView.mas_bottom).mas_offset(0);
+            make.width.mas_equalTo(kWidth(80));
+        }];
+        
+        
+        
+        
+    }else{
+        [headView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+        LMHomeSectionModel *sectionModel=self.sectionArray[indexPath.section];
+        headView.backgroundColor=LMWhiteColor;
+        
+        //lineView
+        UIView *lineView=[[UIView alloc]init];
+        lineView.backgroundColor=LMLightColor;
+        [headView addSubview:lineView];
+        
+        //标题
+        UILabel *titleLabel=[[UILabel alloc]init];
+        titleLabel.text=[NSString stringWithFormat:@"%@", sectionModel.name];
+        [headView addSubview:titleLabel];
+        UIButton *moreBtn=[[UIButton alloc]init];
+        //更多按钮
+        [moreBtn setTitle:@"更多" forState:UIControlStateNormal];
+        [moreBtn setTitleColor:LMLightGrayColor forState:UIControlStateNormal];
+        [headView addSubview:moreBtn];
+        
+        //布局
+        [self.bannerView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.left.right.mas_offset(0);
+            make.height.mas_equalTo(LMHomeBannerHeight);
+            
+        }];
+        [lineView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_offset(0);
+            make.height.mas_equalTo(10);
+            make.left.right.mas_offset(0);
+            
+        }];
+        
+        
+        [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.mas_offset(kWidth(10));
+            make.top.equalTo(lineView.mas_bottom).mas_offset(0);
+            make.bottom.mas_offset(0);
+            make.width.mas_equalTo(0.5*kScreenWidth);
+            
+        }];
+        [moreBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.mas_equalTo(10);
+            make.bottom.mas_offset(0);
+            make.top.equalTo(lineView.mas_bottom).mas_offset(0);
+            make.width.mas_equalTo(kWidth(80));
+        }];
+        
+    
+    
+    }
+    
     
     
 

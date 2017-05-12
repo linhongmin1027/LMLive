@@ -3,7 +3,9 @@
 
 #define BtnListHeight (30)
 //组头视图高度
-#define LMHomeSectionHeight (30)
+#define LMHomeSectionHeight (50)
+//轮播图高度
+#define LMHomeBannerHeight (150)
 
 /**
  *  颜色
@@ -23,6 +25,11 @@
 #define LMPurpleColor [UIColor purpleColor]
 #define LMBrownColor [UIColor brownColor]
 #define LMClearColor [UIColor clearColor]
+
+/**  常用颜色  **/
+#define LMLightColor LMColor_RGB(230,230,230)
+
+
 
 
 /** RGB颜色 */
