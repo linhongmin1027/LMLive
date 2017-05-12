@@ -13,6 +13,13 @@
 		0F6EF3291EC204B4002AE345 /* LMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6EF3281EC204B4002AE345 /* LMAppDelegate.m */; };
 		0F6EF3311EC204B4002AE345 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F6EF3301EC204B4002AE345 /* Assets.xcassets */; };
 		3F54B7D4CC511798A316ECED /* libPods-LMLive.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B1F4026F13F84C607823CF21 /* libPods-LMLive.a */; };
+		6A1D50911EC54A5A00A55D9B /* LMRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A1D50901EC54A5A00A55D9B /* LMRecommendViewController.m */; };
+		6A1D50951EC558DA00A55D9B /* LMRecommendCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A1D50931EC558DA00A55D9B /* LMRecommendCollectionViewCell.m */; };
+		6A1D50961EC558DA00A55D9B /* LMRecommendCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A1D50941EC558DA00A55D9B /* LMRecommendCollectionViewCell.xib */; };
+		6A1D509D1EC5611600A55D9B /* LMNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A1D509C1EC5611600A55D9B /* LMNetworkManager.m */; };
+		6A1D50A01EC561D500A55D9B /* UIImage+LMAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A1D509F1EC561D500A55D9B /* UIImage+LMAdd.m */; };
+		6A1D50A41EC565D800A55D9B /* LMHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A1D50A31EC565D800A55D9B /* LMHomeModel.m */; };
+		6A1D50A71EC565E800A55D9B /* LMHomeSectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A1D50A61EC565E800A55D9B /* LMHomeSectionModel.m */; };
 		6A7A06891EC2BADA00B5791B /* LMTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7A06881EC2BADA00B5791B /* LMTabBarController.m */; };
 		6A7A068F1EC2BCD400B5791B /* LMLaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7A068E1EC2BCD400B5791B /* LMLaunchViewController.m */; };
 		6ABD5CF81EC3133400CBD820 /* LMHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ABD5CF71EC3133400CBD820 /* LMHomeViewController.m */; };
@@ -35,6 +42,19 @@
 		0F6EF3301EC204B4002AE345 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F6EF3351EC204B4002AE345 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E264710D0EC7430FC2DAD1F /* Pods-LMLive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LMLive.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LMLive/Pods-LMLive.debug.xcconfig"; sourceTree = "<group>"; };
+		6A1D508F1EC54A5A00A55D9B /* LMRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMRecommendViewController.h; sourceTree = "<group>"; };
+		6A1D50901EC54A5A00A55D9B /* LMRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMRecommendViewController.m; sourceTree = "<group>"; };
+		6A1D50921EC558DA00A55D9B /* LMRecommendCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMRecommendCollectionViewCell.h; sourceTree = "<group>"; };
+		6A1D50931EC558DA00A55D9B /* LMRecommendCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMRecommendCollectionViewCell.m; sourceTree = "<group>"; };
+		6A1D50941EC558DA00A55D9B /* LMRecommendCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LMRecommendCollectionViewCell.xib; sourceTree = "<group>"; };
+		6A1D509B1EC5611600A55D9B /* LMNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMNetworkManager.h; sourceTree = "<group>"; };
+		6A1D509C1EC5611600A55D9B /* LMNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMNetworkManager.m; sourceTree = "<group>"; };
+		6A1D509E1EC561D500A55D9B /* UIImage+LMAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+LMAdd.h"; sourceTree = "<group>"; };
+		6A1D509F1EC561D500A55D9B /* UIImage+LMAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LMAdd.m"; sourceTree = "<group>"; };
+		6A1D50A21EC565D800A55D9B /* LMHomeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMHomeModel.h; sourceTree = "<group>"; };
+		6A1D50A31EC565D800A55D9B /* LMHomeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMHomeModel.m; sourceTree = "<group>"; };
+		6A1D50A51EC565E800A55D9B /* LMHomeSectionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMHomeSectionModel.h; sourceTree = "<group>"; };
+		6A1D50A61EC565E800A55D9B /* LMHomeSectionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMHomeSectionModel.m; sourceTree = "<group>"; };
 		6A7A06871EC2BADA00B5791B /* LMTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMTabBarController.h; sourceTree = "<group>"; };
 		6A7A06881EC2BADA00B5791B /* LMTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMTabBarController.m; sourceTree = "<group>"; };
 		6A7A068D1EC2BCD400B5791B /* LMLaunchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMLaunchViewController.h; sourceTree = "<group>"; };
@@ -85,22 +105,11 @@
 				0F3A8C251EC4B46D00C84379 /* LMHomeTitleView.m */,
 				0F3A8C241EC4B46D00C84379 /* LMSegmentView.m */,
 				0F3A8C261EC4B46D00C84379 /* LMSegmentView.h */,
+				6A1D50921EC558DA00A55D9B /* LMRecommendCollectionViewCell.h */,
+				6A1D50931EC558DA00A55D9B /* LMRecommendCollectionViewCell.m */,
+				6A1D50941EC558DA00A55D9B /* LMRecommendCollectionViewCell.xib */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		0F3A8C221EC4B46400C84379 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		0F3A8C291EC4B4DE00C84379 /* Utility */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utility;
 			sourceTree = "<group>";
 		};
 		0F3A8C2A1EC4B4DE00C84379 /* Account */ = {
@@ -147,10 +156,30 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		6A1D509A1EC5610F00A55D9B /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				6A1D509B1EC5611600A55D9B /* LMNetworkManager.h */,
+				6A1D509C1EC5611600A55D9B /* LMNetworkManager.m */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		6A1D50A11EC565BF00A55D9B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6A1D50A21EC565D800A55D9B /* LMHomeModel.h */,
+				6A1D50A31EC565D800A55D9B /* LMHomeModel.m */,
+				6A1D50A51EC565E800A55D9B /* LMHomeSectionModel.h */,
+				6A1D50A61EC565E800A55D9B /* LMHomeSectionModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		6A7A066B1EC2BA7A00B5791B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				0F3A8C291EC4B4DE00C84379 /* Utility */,
+				6A1D509A1EC5610F00A55D9B /* Utility */,
 				0F3A8C2A1EC4B4DE00C84379 /* Account */,
 				6A7A06701EC2BA7A00B5791B /* Home */,
 				6A7A06741EC2BA7A00B5791B /* Live */,
@@ -164,8 +193,8 @@
 		6A7A06701EC2BA7A00B5791B /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				6A1D50A11EC565BF00A55D9B /* Model */,
 				0F3A8C211EC4B46400C84379 /* Views */,
-				0F3A8C221EC4B46400C84379 /* Model */,
 				6A7A06711EC2BA7A00B5791B /* Controller */,
 			);
 			path = Home;
@@ -176,6 +205,8 @@
 			children = (
 				6ABD5CF61EC3133400CBD820 /* LMHomeViewController.h */,
 				6ABD5CF71EC3133400CBD820 /* LMHomeViewController.m */,
+				6A1D508F1EC54A5A00A55D9B /* LMRecommendViewController.h */,
+				6A1D50901EC54A5A00A55D9B /* LMRecommendViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -212,6 +243,8 @@
 			children = (
 				6ABD5D051EC31C9500CBD820 /* UIView+LMAdd.h */,
 				6ABD5D061EC31C9500CBD820 /* UIView+LMAdd.m */,
+				6A1D509E1EC561D500A55D9B /* UIImage+LMAdd.h */,
+				6A1D509F1EC561D500A55D9B /* UIImage+LMAdd.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -313,6 +346,7 @@
 		0F6EF3191EC204B4002AE345 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = LM;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = linhongmin;
 				TargetAttributes = {
@@ -346,6 +380,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A1D50961EC558DA00A55D9B /* LMRecommendCollectionViewCell.xib in Resources */,
 				0F6EF3311EC204B4002AE345 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,15 +440,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A1D50911EC54A5A00A55D9B /* LMRecommendViewController.m in Sources */,
+				6A1D50A71EC565E800A55D9B /* LMHomeSectionModel.m in Sources */,
 				6A7A06891EC2BADA00B5791B /* LMTabBarController.m in Sources */,
 				6ABD5D041EC315BD00CBD820 /* LMNavigationViewController.m in Sources */,
 				6ABD5D011EC3139500CBD820 /* LMMyLiveViewController.m in Sources */,
+				6A1D50951EC558DA00A55D9B /* LMRecommendCollectionViewCell.m in Sources */,
 				0F3A8C281EC4B46D00C84379 /* LMHomeTitleView.m in Sources */,
 				6ABD5D071EC31C9500CBD820 /* UIView+LMAdd.m in Sources */,
 				0F6EF3291EC204B4002AE345 /* LMAppDelegate.m in Sources */,
+				6A1D50A01EC561D500A55D9B /* UIImage+LMAdd.m in Sources */,
+				6A1D509D1EC5611600A55D9B /* LMNetworkManager.m in Sources */,
 				0F3A8C271EC4B46D00C84379 /* LMSegmentView.m in Sources */,
 				6ABD5CF81EC3133400CBD820 /* LMHomeViewController.m in Sources */,
 				6ABD5CFE1EC3138300CBD820 /* LMMineViewController.m in Sources */,
+				6A1D50A41EC565D800A55D9B /* LMHomeModel.m in Sources */,
 				6A7A068F1EC2BCD400B5791B /* LMLaunchViewController.m in Sources */,
 				0F6EF3261EC204B4002AE345 /* main.m in Sources */,
 				6ABD5CFB1EC3134500CBD820 /* LMLiveViewController.m in Sources */,

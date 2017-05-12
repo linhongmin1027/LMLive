@@ -1,7 +1,9 @@
 
 /*************************首页************************/
-#define BtnListHeight (30)
 
+#define BtnListHeight (30)
+//组头视图高度
+#define LMHomeSectionHeight (30)
 
 /**
  *  颜色
