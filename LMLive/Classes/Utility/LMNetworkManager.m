@@ -52,11 +52,20 @@
 #pragma mark  - GET
 +(void)GET:(NSString *)urlString params:(id)params sucessBlock:(requestSucess)successBlock failBlock:(requestFailure)failBlock progress:(downloadProgress)progress{
     [[LMNetworkManager shareManager] GET:urlString parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
-        progress(downloadProgress.completedUnitCount/downloadProgress.totalUnitCount);
+        if (progress) {
+            progress(downloadProgress.completedUnitCount/downloadProgress.totalUnitCount);
+        }
+        
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        successBlock(responseObject);
+        if (successBlock) {
+            successBlock(responseObject);
+        }
+        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        failBlock(error);
+        if (failBlock) {
+            failBlock(error);
+        }
+        
         
     }];
     
@@ -67,12 +76,21 @@
 #pragma mark  - POST
 +(void)POST:(NSString *)urlString params:(id)params sucessBlock:(requestSucess)successBlock failBlock:(requestFailure)failBlock progress:(downloadProgress)progress{
     [[LMNetworkManager shareManager] POST:urlString parameters:params progress:^(NSProgress * _Nonnull uploadProgress) {
-        progress(uploadProgress.completedUnitCount/uploadProgress.totalUnitCount);
+        if (progress) {
+            progress(uploadProgress.completedUnitCount/uploadProgress.totalUnitCount);
+        }
+        
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        successBlock(responseObject);
+        if (successBlock) {
+            successBlock(responseObject);
+        }
+        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        failBlock(error);
+        if (failBlock) {
+            failBlock(error);
+        }
+        
         
     }];
 }
@@ -113,6 +131,7 @@
         
         
     } progress:^(NSProgress * _Nonnull uploadProgress) {
+        
         progress(uploadProgress.completedUnitCount / uploadProgress.totalUnitCount);
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
