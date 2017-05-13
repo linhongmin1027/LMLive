@@ -89,7 +89,7 @@ static NSString * const RecommendCollectionCellId=@"RecommendCollectionCellId";
         UICollectionViewFlowLayout *flowLayout=[[UICollectionViewFlowLayout alloc]init];
         flowLayout.itemSize=CGSizeMake((kScreenWidth-kWidth(30))*0.5, 0.2*kScreenHeight);
         flowLayout.scrollDirection=UICollectionViewScrollDirectionVertical;
-        UICollectionView *contrainCollectionView=[[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, self.view.frame.size.height-BtnListHeight) collectionViewLayout:flowLayout];
+        UICollectionView *contrainCollectionView=[[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight-BtnListHeight-64-49) collectionViewLayout:flowLayout];
         contrainCollectionView.backgroundColor=LMWhiteColor;
         contrainCollectionView.delegate=self;
         contrainCollectionView.dataSource=self;
@@ -198,10 +198,13 @@ static NSString * const RecommendCollectionCellId=@"RecommendCollectionCellId";
         //标题
         UILabel *titleLabel=[[UILabel alloc]init];
         titleLabel.text=[NSString stringWithFormat:@"%@", sectionModel.name];
+        titleLabel.font=[UIFont boldSystemFontOfSize:17];
+        
         [headView addSubview:titleLabel];
         UIButton *moreBtn=[[UIButton alloc]init];
         //更多按钮
         [moreBtn setTitle:@"更多" forState:UIControlStateNormal];
+        moreBtn.titleLabel.font=[UIFont systemFontOfSize:15];
         [moreBtn setTitleColor:LMLightGrayColor forState:UIControlStateNormal];
         [headView addSubview:moreBtn];
         
@@ -249,10 +252,13 @@ static NSString * const RecommendCollectionCellId=@"RecommendCollectionCellId";
         //标题
         UILabel *titleLabel=[[UILabel alloc]init];
         titleLabel.text=[NSString stringWithFormat:@"%@", sectionModel.name];
+        titleLabel.font=[UIFont boldSystemFontOfSize:17];
+
         [headView addSubview:titleLabel];
         UIButton *moreBtn=[[UIButton alloc]init];
         //更多按钮
         [moreBtn setTitle:@"更多" forState:UIControlStateNormal];
+        moreBtn.titleLabel.font=[UIFont systemFontOfSize:15];
         [moreBtn setTitleColor:LMLightGrayColor forState:UIControlStateNormal];
         [headView addSubview:moreBtn];
         

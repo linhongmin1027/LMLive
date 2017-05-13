@@ -28,6 +28,7 @@
 
 /**  常用颜色  **/
 #define LMLightColor LMColor_RGB(230,230,230)
+#define LMLightDarkColor LMColor_RGBA_256(0, 0, 0, 1)
 
 
 
