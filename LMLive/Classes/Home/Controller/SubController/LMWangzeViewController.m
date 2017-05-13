@@ -1,22 +1,23 @@
 //
-//  LMMineViewController.m
+//  LMWangzeViewController.m
 //  LMLive
 //
 //  Created by iOSDev on 17/5/13.
 //  Copyright © 2017年 linhongmin. All rights reserved.
 //
 
-#import "LMMineViewController.h"
+#import "LMWangzeViewController.h"
 
-@interface LMMineViewController ()
+@interface LMWangzeViewController ()
 
 @end
 
-@implementation LMMineViewController
+@implementation LMWangzeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.url=LMWangzeUrl;
+    self.style=LMCollectionStyleBanner;
 }
 
 - (void)didReceiveMemoryWarning {

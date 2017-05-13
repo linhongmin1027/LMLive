@@ -9,10 +9,19 @@
 #define LMLOLUrl @"/json/categories/lol/list.json?0510103805"
 /************************showing********************/
 
-#define LMShowingUrl @""
+#define LMShowingUrl @"/json/categories/showing/list.json?0510103936"
 /************************户外直播********************/
 
 #define LMHuWaiUrl @"/json/categories/huwai/list.json?0510103936"
 /************************王者荣耀********************/
 
 #define LMWangzeUrl @"/json/categories/wangzhe/list.json?0510103643"
+/************************全民星秀********************/
+#define LMBeautyUrl @"/json/categories/beauty/list.json?0510103726"
+/************************守望先锋********************/
+#define LMOverwatchUrl @"/json/categories/overwatch/list.json?0510104016"
+/************************炉石传说********************/
+#define LMHeartStoneUrl @"/json/categories/heartstone/list.json?0510104125"
+/************************全部直播********************/
+
+#define LMPlayUrl @"/json/play/list.json?0510104736"

@@ -71,7 +71,8 @@
 
 
 
-
+#define kNaviGationBarHeight 64
+#define kTabBarHeight 49
 
 /**********************强弱引用***************************/
 

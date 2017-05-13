@@ -1,22 +1,23 @@
 //
-//  LMMineViewController.m
+//  LMShowingViewController.m
 //  LMLive
 //
 //  Created by iOSDev on 17/5/13.
 //  Copyright © 2017年 linhongmin. All rights reserved.
 //
 
-#import "LMMineViewController.h"
+#import "LMShowingViewController.h"
 
-@interface LMMineViewController ()
+@interface LMShowingViewController ()
 
 @end
 
-@implementation LMMineViewController
+@implementation LMShowingViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.url=LMShowingUrl;
+    self.style=LMCollectionStyleBanner;
 }
 
 - (void)didReceiveMemoryWarning {

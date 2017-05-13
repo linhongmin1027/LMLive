@@ -8,8 +8,12 @@
 
 #import "LMHomeViewController.h"
 #import "LMSegmentView.h"
-#import "LMHomeBaseViewController.h"
+
 #import "LMRecommendViewController.h"
+#import "LMLOLViewController.h"
+#import "LMShowingViewController.h"
+#import "LMHuWaiViewController.h"
+#import "LMWangzeViewController.h"
 @interface LMHomeViewController ()
 @property(nonatomic, copy)NSArray *titleArray;
 @property(nonatomic, strong)NSArray *controllersArray;
@@ -27,17 +31,24 @@
 }
 -(void)setupOriginalData{
     self.titleArray=@[@"精彩推荐",@"英雄联盟",@"Showing",@"户外直播",@"王者荣耀"];
+    
+    //精彩推荐
     LMRecommendViewController *c1=[[LMRecommendViewController alloc]init];
-     LMHomeBaseViewController *c2=[[LMHomeBaseViewController alloc]init];
-    c2.url=LMLOLUrl;
-    c2.style=LMCollectionStyleBanner;
-     LMHomeBaseViewController *c3=[[LMHomeBaseViewController alloc]init];
-     LMHomeBaseViewController *c4=[[LMHomeBaseViewController alloc]init];
-    c4.url=LMHuWaiUrl;
-    c4.style=LMCollectionStyleBanner;
-     LMHomeBaseViewController *c5=[[LMHomeBaseViewController alloc]init];
-    c5.url=LMWangzeUrl;
-    c5.style=LMCollectionStyleBanner;
+    
+    //英雄联盟
+     LMLOLViewController *c2=[[LMLOLViewController alloc]init];
+    
+    
+    //showing
+     LMShowingViewController *c3=[[LMShowingViewController alloc]init];
+    
+    //户外直播
+     LMHuWaiViewController *c4=[[LMHuWaiViewController alloc]init];
+    
+    
+    //王者荣耀
+     LMWangzeViewController *c5=[[LMWangzeViewController alloc]init];
+    
   
    
     self.controllersArray=@[c1,c2,c3,c4,c5];
@@ -68,17 +79,9 @@
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

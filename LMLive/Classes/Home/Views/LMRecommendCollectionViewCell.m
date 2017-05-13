@@ -102,7 +102,8 @@
 -(void)setModel:(LMHomeModel *)model{
     _model=model;
     self.titleLabel.text=model.title;
-    [self.bgImageView sd_setImageWithURL:[NSURL URLWithString:model.thumb] placeholderImage:[UIImage imageNamed:@""]];
+    [self.bgImageView sd_setImageWithURL:[NSURL URLWithString:model.thumb] placeholderImage:[UIImage imageNamed:@"placeholder_head"] options:SDWebImageRefreshCached];
+    
     self.nickLabel.text=model.nick;
     
     

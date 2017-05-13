@@ -19,6 +19,7 @@ static NSString *LMHomeBaseCollectionCellId=@"LMHomeBaseCollectionCellId";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.automaticallyAdjustsScrollViewInsets=NO;
     _dataArray=[NSMutableArray array];
     
     
@@ -32,7 +33,7 @@ static NSString *LMHomeBaseCollectionCellId=@"LMHomeBaseCollectionCellId";
         if (self.style==LMCollectionStyleBanner) {//有banner条
             collectionView=[[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight-64-49-BtnListHeight) collectionViewLayout:flowLayout];
         }else{//没有banner条
-        
+         collectionView=[[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight-49) collectionViewLayout:flowLayout];
         
         
         }

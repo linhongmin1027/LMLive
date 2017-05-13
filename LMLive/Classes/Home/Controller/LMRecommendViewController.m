@@ -10,6 +10,12 @@
 #import "LMRecommendCollectionViewCell.h"
 #import "LMHomeSectionModel.h"
 #import "LMHomeModel.h"
+
+#import "LMLiveViewController.h"
+#import "LMShowingViewController.h"
+#import "LMWangzeViewController.h"
+#import "LMLOLViewController.h"
+#import "LMHomeBaseViewController.h"
 @interface LMRecommendViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 /**  容器  */
 @property(nonatomic, strong)UICollectionView * contrainCollectionView;
@@ -206,6 +212,9 @@ static NSString * const RecommendCollectionCellId=@"RecommendCollectionCellId";
         [moreBtn setTitle:@"更多" forState:UIControlStateNormal];
         moreBtn.titleLabel.font=[UIFont systemFontOfSize:15];
         [moreBtn setTitleColor:LMLightGrayColor forState:UIControlStateNormal];
+        [moreBtn addTarget:self action:@selector(clickMoreBtn:) forControlEvents:UIControlEventTouchUpInside];
+        moreBtn.tag=200+indexPath.section;
+        
         [headView addSubview:moreBtn];
         
         //布局
@@ -260,6 +269,8 @@ static NSString * const RecommendCollectionCellId=@"RecommendCollectionCellId";
         [moreBtn setTitle:@"更多" forState:UIControlStateNormal];
         moreBtn.titleLabel.font=[UIFont systemFontOfSize:15];
         [moreBtn setTitleColor:LMLightGrayColor forState:UIControlStateNormal];
+        [moreBtn addTarget:self action:@selector(clickMoreBtn:) forControlEvents:UIControlEventTouchUpInside];
+        moreBtn.tag=200+indexPath.section;
         [headView addSubview:moreBtn];
         
         //布局
@@ -293,17 +304,58 @@ static NSString * const RecommendCollectionCellId=@"RecommendCollectionCellId";
     
     
     }
-    
-    
-    
 
+}
 
+#pragma mark  - 点击更多按钮
+-(void)clickMoreBtn:(UIButton *)btn{
+    NSInteger section=btn.tag-200;
+    
+    
+    if (section==0) {//全部
+        LMLiveViewController *liveController=[[LMLiveViewController alloc]init];
+        [self.navigationController pushViewController:liveController animated:YES];
+        
+    }else if (section==1){//showing
+        LMShowingViewController *showController=[[LMShowingViewController alloc]init];
+        [self.navigationController pushViewController:showController animated:YES];
+    
+    }else if (section==2){//王者荣耀
+        LMWangzeViewController *wangzeController=[[LMWangzeViewController alloc]init];
+        [self.navigationController pushViewController:wangzeController animated:YES];
+        
+    }else if (section==3){//全民星秀
+        LMHomeBaseViewController *baseController=[[LMHomeBaseViewController alloc]init];
+        baseController.style=LMCollectionStyleNone;
+        baseController.url=LMBeautyUrl;
+        [self.navigationController pushViewController:baseController animated:YES];
+    }else if (section==4){//英雄联盟
+        LMLOLViewController *lolController=[[LMLOLViewController alloc]init];
+        [self.navigationController pushViewController:lolController animated:YES];
+        
+    }else if (section==5){//全民户外
+        LMHomeBaseViewController *baseController=[[LMHomeBaseViewController alloc]init];
+        baseController.style=LMCollectionStyleNone;
+        baseController.url=LMHuWaiUrl;
+        [self.navigationController pushViewController:baseController animated:YES];
+        
+    }else if (section==6){//守望先锋
+        LMHomeBaseViewController *baseController=[[LMHomeBaseViewController alloc]init];
+        baseController.style=LMCollectionStyleNone;
+        baseController.url=LMOverwatchUrl;
+        [self.navigationController pushViewController:baseController animated:YES];
+        
+    }else if (section==7){//炉石传说
+        LMHomeBaseViewController *baseController=[[LMHomeBaseViewController alloc]init];
+        baseController.style=LMCollectionStyleNone;
+        baseController.url=LMHeartStoneUrl;
+        [self.navigationController pushViewController:baseController animated:YES];
+        
+    }
 
 
 
 }
-
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

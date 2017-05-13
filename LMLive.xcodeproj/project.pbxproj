@@ -21,11 +21,15 @@
 		6A1D50A01EC561D500A55D9B /* UIImage+LMAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A1D509F1EC561D500A55D9B /* UIImage+LMAdd.m */; };
 		6A1D50A41EC565D800A55D9B /* LMHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A1D50A31EC565D800A55D9B /* LMHomeModel.m */; };
 		6A1D50A71EC565E800A55D9B /* LMHomeSectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A1D50A61EC565E800A55D9B /* LMHomeSectionModel.m */; };
+		6A632E251EC69814009959C6 /* LMShowingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A632E241EC69814009959C6 /* LMShowingViewController.m */; };
+		6A632E281EC69822009959C6 /* LMLOLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A632E271EC69822009959C6 /* LMLOLViewController.m */; };
+		6A632E2B1EC6983A009959C6 /* LMWangzeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A632E2A1EC6983A009959C6 /* LMWangzeViewController.m */; };
+		6A632E2E1EC6984D009959C6 /* LMHuWaiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A632E2D1EC6984D009959C6 /* LMHuWaiViewController.m */; };
+		6A632FEB1EC6D740009959C6 /* LMMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A632FEA1EC6D740009959C6 /* LMMineViewController.m */; };
 		6A7A06891EC2BADA00B5791B /* LMTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7A06881EC2BADA00B5791B /* LMTabBarController.m */; };
 		6A7A068F1EC2BCD400B5791B /* LMLaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7A068E1EC2BCD400B5791B /* LMLaunchViewController.m */; };
 		6ABD5CF81EC3133400CBD820 /* LMHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ABD5CF71EC3133400CBD820 /* LMHomeViewController.m */; };
 		6ABD5CFB1EC3134500CBD820 /* LMLiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ABD5CFA1EC3134500CBD820 /* LMLiveViewController.m */; };
-		6ABD5CFE1EC3138300CBD820 /* LMMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ABD5CFD1EC3138300CBD820 /* LMMineViewController.m */; };
 		6ABD5D011EC3139500CBD820 /* LMMyLiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ABD5D001EC3139500CBD820 /* LMMyLiveViewController.m */; };
 		6ABD5D041EC315BD00CBD820 /* LMNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ABD5D031EC315BD00CBD820 /* LMNavigationViewController.m */; };
 		6ABD5D071EC31C9500CBD820 /* UIView+LMAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ABD5D061EC31C9500CBD820 /* UIView+LMAdd.m */; };
@@ -58,6 +62,16 @@
 		6A1D50A31EC565D800A55D9B /* LMHomeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMHomeModel.m; sourceTree = "<group>"; };
 		6A1D50A51EC565E800A55D9B /* LMHomeSectionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMHomeSectionModel.h; sourceTree = "<group>"; };
 		6A1D50A61EC565E800A55D9B /* LMHomeSectionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMHomeSectionModel.m; sourceTree = "<group>"; };
+		6A632E231EC69814009959C6 /* LMShowingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMShowingViewController.h; sourceTree = "<group>"; };
+		6A632E241EC69814009959C6 /* LMShowingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMShowingViewController.m; sourceTree = "<group>"; };
+		6A632E261EC69822009959C6 /* LMLOLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMLOLViewController.h; sourceTree = "<group>"; };
+		6A632E271EC69822009959C6 /* LMLOLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMLOLViewController.m; sourceTree = "<group>"; };
+		6A632E291EC6983A009959C6 /* LMWangzeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMWangzeViewController.h; sourceTree = "<group>"; };
+		6A632E2A1EC6983A009959C6 /* LMWangzeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMWangzeViewController.m; sourceTree = "<group>"; };
+		6A632E2C1EC6984D009959C6 /* LMHuWaiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMHuWaiViewController.h; sourceTree = "<group>"; };
+		6A632E2D1EC6984D009959C6 /* LMHuWaiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMHuWaiViewController.m; sourceTree = "<group>"; };
+		6A632FE91EC6D740009959C6 /* LMMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMMineViewController.h; sourceTree = "<group>"; };
+		6A632FEA1EC6D740009959C6 /* LMMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMMineViewController.m; sourceTree = "<group>"; };
 		6A7A06871EC2BADA00B5791B /* LMTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMTabBarController.h; sourceTree = "<group>"; };
 		6A7A06881EC2BADA00B5791B /* LMTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMTabBarController.m; sourceTree = "<group>"; };
 		6A7A068D1EC2BCD400B5791B /* LMLaunchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMLaunchViewController.h; sourceTree = "<group>"; };
@@ -69,8 +83,6 @@
 		6ABD5CF71EC3133400CBD820 /* LMHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMHomeViewController.m; sourceTree = "<group>"; };
 		6ABD5CF91EC3134500CBD820 /* LMLiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMLiveViewController.h; sourceTree = "<group>"; };
 		6ABD5CFA1EC3134500CBD820 /* LMLiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMLiveViewController.m; sourceTree = "<group>"; };
-		6ABD5CFC1EC3138300CBD820 /* LMMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMMineViewController.h; sourceTree = "<group>"; };
-		6ABD5CFD1EC3138300CBD820 /* LMMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMMineViewController.m; sourceTree = "<group>"; };
 		6ABD5CFF1EC3139500CBD820 /* LMMyLiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMMyLiveViewController.h; sourceTree = "<group>"; };
 		6ABD5D001EC3139500CBD820 /* LMMyLiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMMyLiveViewController.m; sourceTree = "<group>"; };
 		6ABD5D021EC315BD00CBD820 /* LMNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMNavigationViewController.h; sourceTree = "<group>"; };
@@ -188,6 +200,30 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		6A632E221EC696AA009959C6 /* SubController */ = {
+			isa = PBXGroup;
+			children = (
+				6A632E231EC69814009959C6 /* LMShowingViewController.h */,
+				6A632E241EC69814009959C6 /* LMShowingViewController.m */,
+				6A632E261EC69822009959C6 /* LMLOLViewController.h */,
+				6A632E271EC69822009959C6 /* LMLOLViewController.m */,
+				6A632E291EC6983A009959C6 /* LMWangzeViewController.h */,
+				6A632E2A1EC6983A009959C6 /* LMWangzeViewController.m */,
+				6A632E2C1EC6984D009959C6 /* LMHuWaiViewController.h */,
+				6A632E2D1EC6984D009959C6 /* LMHuWaiViewController.m */,
+			);
+			path = SubController;
+			sourceTree = "<group>";
+		};
+		6A632FE81EC6D72B009959C6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6A632FE91EC6D740009959C6 /* LMMineViewController.h */,
+				6A632FEA1EC6D740009959C6 /* LMMineViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		6A7A066B1EC2BA7A00B5791B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +251,7 @@
 		6A7A06711EC2BA7A00B5791B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				6A632E221EC696AA009959C6 /* SubController */,
 				0F1CDB6E1EC60E55009B6F5F /* BaseController */,
 				6ABD5CF61EC3133400CBD820 /* LMHomeViewController.h */,
 				6ABD5CF71EC3133400CBD820 /* LMHomeViewController.m */,
@@ -290,18 +327,9 @@
 		6A7A067E1EC2BA7A00B5791B /* Mine */ = {
 			isa = PBXGroup;
 			children = (
-				6A7A067F1EC2BA7A00B5791B /* Controller */,
+				6A632FE81EC6D72B009959C6 /* Controller */,
 			);
 			path = Mine;
-			sourceTree = "<group>";
-		};
-		6A7A067F1EC2BA7A00B5791B /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				6ABD5CFC1EC3138300CBD820 /* LMMineViewController.h */,
-				6ABD5CFD1EC3138300CBD820 /* LMMineViewController.m */,
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		6A7A06821EC2BA7A00B5791B /* MyLive */ = {
@@ -454,12 +482,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A1D50911EC54A5A00A55D9B /* LMRecommendViewController.m in Sources */,
+				6A632E281EC69822009959C6 /* LMLOLViewController.m in Sources */,
 				6A1D50A71EC565E800A55D9B /* LMHomeSectionModel.m in Sources */,
+				6A632FEB1EC6D740009959C6 /* LMMineViewController.m in Sources */,
+				6A632E2B1EC6983A009959C6 /* LMWangzeViewController.m in Sources */,
 				6A7A06891EC2BADA00B5791B /* LMTabBarController.m in Sources */,
 				6ABD5D041EC315BD00CBD820 /* LMNavigationViewController.m in Sources */,
 				6ABD5D011EC3139500CBD820 /* LMMyLiveViewController.m in Sources */,
 				6A1D50951EC558DA00A55D9B /* LMRecommendCollectionViewCell.m in Sources */,
 				0F3A8C281EC4B46D00C84379 /* LMHomeTitleView.m in Sources */,
+				6A632E2E1EC6984D009959C6 /* LMHuWaiViewController.m in Sources */,
 				6ABD5D071EC31C9500CBD820 /* UIView+LMAdd.m in Sources */,
 				0F6EF3291EC204B4002AE345 /* LMAppDelegate.m in Sources */,
 				6A1D50A01EC561D500A55D9B /* UIImage+LMAdd.m in Sources */,
@@ -467,11 +499,11 @@
 				6A1D509D1EC5611600A55D9B /* LMNetworkManager.m in Sources */,
 				0F3A8C271EC4B46D00C84379 /* LMSegmentView.m in Sources */,
 				6ABD5CF81EC3133400CBD820 /* LMHomeViewController.m in Sources */,
-				6ABD5CFE1EC3138300CBD820 /* LMMineViewController.m in Sources */,
 				6A1D50A41EC565D800A55D9B /* LMHomeModel.m in Sources */,
 				6A7A068F1EC2BCD400B5791B /* LMLaunchViewController.m in Sources */,
 				0F6EF3261EC204B4002AE345 /* main.m in Sources */,
 				6ABD5CFB1EC3134500CBD820 /* LMLiveViewController.m in Sources */,
+				6A632E251EC69814009959C6 /* LMShowingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,10 +607,19 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 7FY57H4H7A;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LMLive/Classes/Mine/Profile/Chat/Libs/HyphenateSDK",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LMLive/Classes/Main/Others/LMprefixHeader.pch";
 				INFOPLIST_FILE = LMLive/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LMLive/Classes/Mine/Profile/Chat/Libs/EaseUI/EMUIKit/3rdparty/DeviceHelper/VoiceConvert/opencore-amrnb",
+					"$(PROJECT_DIR)/LMLive/Classes/Mine/Profile/Chat/Libs/EaseUI/EMUIKit/3rdparty/DeviceHelper/VoiceConvert/opencore-amrwb",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.LMin.LMLive;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "f85969fc-a0c8-47c4-8277-ed05a3336de9";
@@ -594,10 +635,19 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = 7FY57H4H7A;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LMLive/Classes/Mine/Profile/Chat/Libs/HyphenateSDK",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/LMLive/Classes/Main/Others/LMprefixHeader.pch";
 				INFOPLIST_FILE = LMLive/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LMLive/Classes/Mine/Profile/Chat/Libs/EaseUI/EMUIKit/3rdparty/DeviceHelper/VoiceConvert/opencore-amrnb",
+					"$(PROJECT_DIR)/LMLive/Classes/Mine/Profile/Chat/Libs/EaseUI/EMUIKit/3rdparty/DeviceHelper/VoiceConvert/opencore-amrwb",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.LMin.LMLive;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "d890c211-4c03-4dcb-8dc9-d18a1f7ab465";

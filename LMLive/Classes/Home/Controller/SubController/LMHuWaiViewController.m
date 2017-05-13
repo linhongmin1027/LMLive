@@ -1,22 +1,23 @@
 //
-//  LMMineViewController.m
+//  LMHuWaiViewController.m
 //  LMLive
 //
 //  Created by iOSDev on 17/5/13.
 //  Copyright © 2017年 linhongmin. All rights reserved.
 //
 
-#import "LMMineViewController.h"
+#import "LMHuWaiViewController.h"
 
-@interface LMMineViewController ()
+@interface LMHuWaiViewController ()
 
 @end
 
-@implementation LMMineViewController
+@implementation LMHuWaiViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.url=LMHuWaiUrl;
+    self.style=LMCollectionStyleBanner;
 }
 
 - (void)didReceiveMemoryWarning {
