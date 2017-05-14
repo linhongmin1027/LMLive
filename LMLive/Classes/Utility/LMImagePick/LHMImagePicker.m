@@ -96,7 +96,10 @@
     NSLog(@"%@",info);
     UIImage *img = info[@"UIImagePickerControllerOriginalImage"];
     UIImage *edit = info[@"UIImagePickerControllerEditedImage"];
-    _imagecb(img);
+    if (_imagecb) {
+        _imagecb(img);
+    }
+    
     if (self.editType==LMEditTypeCircle)
     {
         LMEditController *editController=[[LMEditController alloc]init];

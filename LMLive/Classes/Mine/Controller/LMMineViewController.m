@@ -10,6 +10,7 @@
 #import "LMMineModel.h"
 #import "LMCollectionViewCell.h"
 #import "LHMImagePicker.h"
+#import "LMAccount.h"
 #define LMMineHeight (250)
 @interface LMMineViewController ()<UINavigationControllerDelegate ,UICollectionViewDelegate,UICollectionViewDataSource>
 
@@ -21,6 +22,9 @@
 
 //用户头像
 @property(nonatomic, strong)UIImageView *userImageView;
+
+//用户信息
+@property(nonatomic,strong)LMAccount *account;
 @end
 
 static NSString *const LMCollectionCellId=@"LMCollectionCellId";
@@ -29,6 +33,11 @@ static NSString *const LMMineSctionHeadViewId=@"LMMineSctionHeadViewId";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.account=[LMAccount getAccount];
+    if (!self.account) {
+        self.account=[[LMAccount alloc]init];
+    }
+    
     self.navigationController.delegate=self;
     [self setupData];
     self.automaticallyAdjustsScrollViewInsets=NO;
@@ -123,7 +132,17 @@ static NSString *const LMMineSctionHeadViewId=@"LMMineSctionHeadViewId";
     [headView addSubview:bgImageView];
     
     self.userImageView=[[UIImageView alloc]init];
-    self.userImageView.image=[UIImage imageNamed:@"user_logo"];
+    
+    if (self.account.avartImg==nil) {
+        self.userImageView.image=[UIImage imageNamed:@"user_logo"];
+    }else{
+    
+        self.userImageView.image=self.account.avartImg;
+    
+    }
+    
+    
+    
     self.userImageView.userInteractionEnabled=YES;
     UITapGestureRecognizer *tap=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(changeAvatarImage)];
     
@@ -172,13 +191,16 @@ static NSString *const LMMineSctionHeadViewId=@"LMMineSctionHeadViewId";
 
 #pragma mark  - 更换头像
 -(void)changeAvatarImage{
-
-
-
-
-
-
-
+    [[LHMImagePicker sharedInstance] setEditType:LMEditTypeSquare];
+    [[LHMImagePicker sharedInstance] getImageFromViewController:self image:nil editedImage:^(UIImage *editedImage) {
+        
+      UIImage*  clipImage=[UIImage imageWithClipImage:editedImage borderWidth:0.0f borderColor:nil];
+        
+      self.account.avartImg=clipImage;
+        self.userImageView.image=clipImage;
+        [self.account saveAccount];
+        
+    }];
 }
 
 #pragma mark  - UINavigationControllerDelegate

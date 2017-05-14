@@ -16,6 +16,8 @@
 #import "LMWangzeViewController.h"
 #import "LMLOLViewController.h"
 #import "LMHomeBaseViewController.h"
+
+#import "LMCycleScrollView.h"
 @interface LMRecommendViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 /**  容器  */
 @property(nonatomic, strong)UICollectionView * contrainCollectionView;
@@ -24,7 +26,9 @@
 
 @property(nonatomic, strong)NSMutableArray *dataArray;
 /**  滚动视图  */
-@property(nonatomic, strong)UIView *bannerView;
+@property(nonatomic, strong)LMCycleScrollView *cycleView;
+/**  滚动视图数组  */
+@property(nonatomic, strong)NSMutableArray *bannerImageArray;
 @end
 
 static NSString * const RecommendCollectionSectionHeaderId=@"RecommendCollectionSectionHeaderId";
@@ -37,13 +41,15 @@ static NSString * const RecommendCollectionCellId=@"RecommendCollectionCellId";
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupOriginalData];
+    
     [self setupNetData];
     [self.view addSubview:self.contrainCollectionView];
-    
+    [self setupCycleImgData];
 }
 -(void)setupOriginalData{
     self.sectionArray=[NSMutableArray array];
     self.dataArray=[NSMutableArray array];
+    self.bannerImageArray=[NSMutableArray array];
 
 
 
@@ -89,6 +95,27 @@ static NSString * const RecommendCollectionCellId=@"RecommendCollectionCellId";
 
 
 }
+#pragma mark  - 加载轮播图数据
+-(void)setupCycleImgData{
+    [LMNetworkManager GET:LMBannerUrl params:nil sucessBlock:^(id object) {
+        
+        NSArray *tempArray=object[@"ios-focus"];
+        for (NSDictionary *dict in tempArray) {
+            NSString *str=dict[@"thumb"];
+            [self.bannerImageArray addObject:dict[@"thumb"]];
+            
+        }
+        self.cycleView.urlStringArray=self.bannerImageArray;
+        
+    } failBlock:^(NSError *error) {
+        LMLog(@"%@",error);
+        
+    } progress:nil];
+
+
+
+
+}
 -(UICollectionView *)contrainCollectionView{
     if (!_contrainCollectionView) {
         
@@ -113,18 +140,18 @@ static NSString * const RecommendCollectionCellId=@"RecommendCollectionCellId";
     return _contrainCollectionView;
 }
 #pragma mark  - 滚动视图
--(UIView *)bannerView{
-    if (!_bannerView) {
-        UIView *bannerView=[[UIView alloc]init];
-        bannerView.backgroundColor=[UIColor redColor];
-        _bannerView=bannerView;
+
+-(LMCycleScrollView *)cycleView{
+    if (!_cycleView) {
+        LMCycleScrollView *cycleView=[LMCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, kScreenWidth, LMHomeBannerHeight) imageUrl:self.bannerImageArray];
+        cycleView.placeholdImage=[UIImage imageNamed:@"placeholder_head"];
+        _cycleView=cycleView;
     }
-    return _bannerView;
 
-
-
+    return _cycleView;
 
 }
+
 #pragma mark  - UICollectionViewDataSource
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
@@ -195,7 +222,7 @@ static NSString * const RecommendCollectionCellId=@"RecommendCollectionCellId";
         LMHomeSectionModel *sectionModel=self.sectionArray[indexPath.section];
         headView.backgroundColor=LMWhiteColor;
         //滚动视图
-        [headView addSubview:self.bannerView];
+        [headView addSubview:self.cycleView];
         //lineView
         UIView *lineView=[[UIView alloc]init];
         lineView.backgroundColor=LMLightColor;
@@ -218,13 +245,9 @@ static NSString * const RecommendCollectionCellId=@"RecommendCollectionCellId";
         [headView addSubview:moreBtn];
         
         //布局
-        [self.bannerView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.left.right.mas_offset(0);
-            make.height.mas_equalTo(LMHomeBannerHeight);
-            
-        }];
+        
         [lineView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self.bannerView.mas_bottom).mas_offset(0);
+            make.top.mas_equalTo(LMHomeBannerHeight);
             make.height.mas_equalTo(10);
             make.left.right.mas_offset(0);
             
@@ -274,11 +297,7 @@ static NSString * const RecommendCollectionCellId=@"RecommendCollectionCellId";
         [headView addSubview:moreBtn];
         
         //布局
-        [self.bannerView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.left.right.mas_offset(0);
-            make.height.mas_equalTo(LMHomeBannerHeight);
-            
-        }];
+       
         [lineView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_offset(0);
             make.height.mas_equalTo(10);

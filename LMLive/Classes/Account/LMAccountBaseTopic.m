@@ -8,6 +8,7 @@
 
 #import "LMAccountBaseTopic.h"
 #import <objc/runtime.h>
+
 @implementation LMAccountBaseTopic
 
 - (id)initWithCoder:(NSCoder *)decoder{
@@ -56,6 +57,7 @@
 
 
 }
+
 /**  获取account  */
 +(id)getAccount{
       NSString *filePath=[[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingString:@"/LMUser.data"];
