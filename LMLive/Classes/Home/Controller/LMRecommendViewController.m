@@ -185,7 +185,7 @@ static NSString * const RecommendCollectionCellId=@"RecommendCollectionCellId";
 #pragma mark  - 设置边距
 -(UIEdgeInsets) collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 {
-    //距离边界位置(上,右,下,左)
+    //距离边界位置(上,左,下,右)
     return UIEdgeInsetsMake(0, 10, 10,10);
 }
 

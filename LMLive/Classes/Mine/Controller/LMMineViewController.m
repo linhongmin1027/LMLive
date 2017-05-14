@@ -7,31 +7,184 @@
 //
 
 #import "LMMineViewController.h"
+#import "LMMineModel.h"
+#import "LMCollectionViewCell.h"
+#import "LHMImagePicker.h"
+#define LMMineHeight (250)
+@interface LMMineViewController ()<UINavigationControllerDelegate ,UICollectionViewDelegate,UICollectionViewDataSource>
 
-@interface LMMineViewController ()
+@property(nonatomic, strong)UICollectionView *collectionView;
+//按钮数据
+@property(nonatomic, copy)NSArray *iconArray;
+@property(nonatomic, copy)NSArray *titleArray;
+@property(nonatomic, strong)NSMutableArray *dataArray;
 
+//用户头像
+@property(nonatomic, strong)UIImageView *userImageView;
 @end
 
+static NSString *const LMCollectionCellId=@"LMCollectionCellId";
+static NSString *const LMMineSctionHeadViewId=@"LMMineSctionHeadViewId";
 @implementation LMMineViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.navigationController.delegate=self;
+    [self setupData];
+    self.automaticallyAdjustsScrollViewInsets=NO;
+    [self.view addSubview:self.collectionView];
+}
+#pragma mark  - 数据初始化
+-(void)setupData{
+    _dataArray=[NSMutableArray array];
+    _iconArray=@[@"充值",@"分享",@"客服",@"我要直播",@"清除缓存",@"关于我们"];
+    _titleArray=@[@"充值",@"分享App",@"客服",@"我的直播",@"清除缓存",@"关于我们"];
+    for (int i=0; i<_titleArray.count; i++) {
+        LMMineModel *model=[[LMMineModel alloc]init];
+        model.icon=_iconArray[i];
+        model.title=_titleArray[i];
+        [_dataArray addObject:model];
+    }
+
+
+}
+#pragma mark  - 懒加载
+-(UICollectionView *)collectionView{
+    if (!_collectionView) {
+        UICollectionViewFlowLayout *flowLayout=[[UICollectionViewFlowLayout alloc]init];
+        flowLayout.itemSize=CGSizeMake((kScreenWidth-30)/3, (kScreenWidth-30)/3);
+        flowLayout.minimumLineSpacing=0;
+        flowLayout.minimumInteritemSpacing=0;
+        flowLayout.scrollDirection=UICollectionViewScrollDirectionVertical;
+        UICollectionView *collectionView=[[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight-kTabBarHeight) collectionViewLayout:flowLayout];
+        collectionView.backgroundColor=LMWhiteColor;
+        collectionView.delegate=self;
+        collectionView.dataSource=self;
+        //注册cell
+        [collectionView registerClass:[LMCollectionViewCell class] forCellWithReuseIdentifier:LMCollectionCellId];
+        
+        //注册头视图
+        [collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:LMMineSctionHeadViewId];
+        
+        _collectionView=collectionView;
+    }
+    return _collectionView;
+
+
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark  - UICollectionViewDataSource
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    LMCollectionViewCell *cell=[collectionView dequeueReusableCellWithReuseIdentifier:LMCollectionCellId forIndexPath:indexPath];
+    
+    cell.model=_dataArray[indexPath.row];
+    return cell;
+    
+
+}
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    return _dataArray.count;
+
+}
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+
+
+}
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
+    return 1;
+}
+-(UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
+    if (kind ==UICollectionElementKindSectionHeader) {
+        UICollectionReusableView *headView=[collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:LMMineSctionHeadViewId forIndexPath:indexPath];
+        [self setupHeadView:headView];
+        return headView;
+        
+    }
+
+    return nil;
+}
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section{
+    return CGSizeMake(kScreenWidth, LMMineHeight);
+
+
+}
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
+    return UIEdgeInsetsMake(10, 10, 10, 10);
+    
+
+
+
+}
+#pragma mark  - 设置组的头视图
+-(void)setupHeadView:(UIView *)headView{
+    [headView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    UIImageView *bgImageView=[[UIImageView alloc]initWithFrame:CGRectMake(0, 0, headView.bounds.size.width, headView.size.height)];
+    bgImageView.image=[UIImage imageNamed:@"background"];
+    [headView addSubview:bgImageView];
+    
+    self.userImageView=[[UIImageView alloc]init];
+    self.userImageView.image=[UIImage imageNamed:@"user_logo"];
+    self.userImageView.userInteractionEnabled=YES;
+    UITapGestureRecognizer *tap=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(changeAvatarImage)];
+    
+    [self.userImageView addGestureRecognizer:tap];
+    
+    
+    [headView insertSubview:self.userImageView aboveSubview:bgImageView];
+    
+    
+    UILabel *nickLabel=[[UILabel alloc]init];
+    nickLabel.text=@"LBJ敏";
+    nickLabel.textAlignment=NSTextAlignmentCenter;
+    nickLabel.textColor=LMYellowColor;
+    [bgImageView addSubview:nickLabel];
+    
+    UILabel *detailLabel=[[UILabel alloc]init];
+    detailLabel.text=@"咪咪直播-用心创造快乐";
+    detailLabel.textAlignment=NSTextAlignmentCenter;
+    detailLabel.textColor=LMYellowColor;
+    [bgImageView addSubview:detailLabel];
+    
+    
+    [self.userImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.equalTo(headView);
+        make.width.height.mas_equalTo(80);
+        
+    }];
+    
+    [nickLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.userImageView.mas_bottom).mas_offset(10);
+        make.width.mas_equalTo(kScreenWidth);
+        make.left.mas_offset(0);
+        make.height.mas_equalTo(20);
+        
+        
+    }];
+    [detailLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(nickLabel.mas_bottom).mas_offset(5);
+        make.width.mas_equalTo(kScreenWidth);
+        make.left.mas_offset(0);
+        make.height.mas_equalTo(20);
+        
+        
+    }];
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark  - 更换头像
+-(void)changeAvatarImage{
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+
+
+
+
+
+
 }
-*/
 
+#pragma mark  - UINavigationControllerDelegate
+-(void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated{
+    BOOL isHidden=[viewController isKindOfClass:[self class]];
+    [self.navigationController setNavigationBarHidden:isHidden];
+
+}
 @end

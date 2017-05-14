@@ -17,7 +17,6 @@
 		6A1D50911EC54A5A00A55D9B /* LMRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A1D50901EC54A5A00A55D9B /* LMRecommendViewController.m */; };
 		6A1D50951EC558DA00A55D9B /* LMRecommendCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A1D50931EC558DA00A55D9B /* LMRecommendCollectionViewCell.m */; };
 		6A1D50961EC558DA00A55D9B /* LMRecommendCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A1D50941EC558DA00A55D9B /* LMRecommendCollectionViewCell.xib */; };
-		6A1D509D1EC5611600A55D9B /* LMNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A1D509C1EC5611600A55D9B /* LMNetworkManager.m */; };
 		6A1D50A01EC561D500A55D9B /* UIImage+LMAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A1D509F1EC561D500A55D9B /* UIImage+LMAdd.m */; };
 		6A1D50A41EC565D800A55D9B /* LMHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A1D50A31EC565D800A55D9B /* LMHomeModel.m */; };
 		6A1D50A71EC565E800A55D9B /* LMHomeSectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A1D50A61EC565E800A55D9B /* LMHomeSectionModel.m */; };
@@ -26,6 +25,13 @@
 		6A632E2B1EC6983A009959C6 /* LMWangzeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A632E2A1EC6983A009959C6 /* LMWangzeViewController.m */; };
 		6A632E2E1EC6984D009959C6 /* LMHuWaiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A632E2D1EC6984D009959C6 /* LMHuWaiViewController.m */; };
 		6A632FEB1EC6D740009959C6 /* LMMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A632FEA1EC6D740009959C6 /* LMMineViewController.m */; };
+		6A798EF81EC7F628009E5FA9 /* LMMineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A798EF71EC7F628009E5FA9 /* LMMineModel.m */; };
+		6A798EFB1EC7F63D009E5FA9 /* LMCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A798EFA1EC7F63D009E5FA9 /* LMCollectionViewCell.m */; };
+		6A798F021EC82FB1009E5FA9 /* LMAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A798F011EC82FB1009E5FA9 /* LMAccount.m */; };
+		6A798F051EC82FF9009E5FA9 /* LMAccountBaseTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A798F041EC82FF9009E5FA9 /* LMAccountBaseTopic.m */; };
+		6A798F0A1EC839A9009E5FA9 /* LMNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A798F091EC839A9009E5FA9 /* LMNetworkManager.m */; };
+		6A798F0F1EC839C0009E5FA9 /* LHMImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A798F0C1EC839C0009E5FA9 /* LHMImagePicker.m */; };
+		6A798F101EC839C0009E5FA9 /* LMEditController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A798F0E1EC839C0009E5FA9 /* LMEditController.m */; };
 		6A7A06891EC2BADA00B5791B /* LMTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7A06881EC2BADA00B5791B /* LMTabBarController.m */; };
 		6A7A068F1EC2BCD400B5791B /* LMLaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A7A068E1EC2BCD400B5791B /* LMLaunchViewController.m */; };
 		6ABD5CF81EC3133400CBD820 /* LMHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ABD5CF71EC3133400CBD820 /* LMHomeViewController.m */; };
@@ -54,8 +60,6 @@
 		6A1D50921EC558DA00A55D9B /* LMRecommendCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMRecommendCollectionViewCell.h; sourceTree = "<group>"; };
 		6A1D50931EC558DA00A55D9B /* LMRecommendCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMRecommendCollectionViewCell.m; sourceTree = "<group>"; };
 		6A1D50941EC558DA00A55D9B /* LMRecommendCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LMRecommendCollectionViewCell.xib; sourceTree = "<group>"; };
-		6A1D509B1EC5611600A55D9B /* LMNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMNetworkManager.h; sourceTree = "<group>"; };
-		6A1D509C1EC5611600A55D9B /* LMNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMNetworkManager.m; sourceTree = "<group>"; };
 		6A1D509E1EC561D500A55D9B /* UIImage+LMAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+LMAdd.h"; sourceTree = "<group>"; };
 		6A1D509F1EC561D500A55D9B /* UIImage+LMAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LMAdd.m"; sourceTree = "<group>"; };
 		6A1D50A21EC565D800A55D9B /* LMHomeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMHomeModel.h; sourceTree = "<group>"; };
@@ -72,6 +76,20 @@
 		6A632E2D1EC6984D009959C6 /* LMHuWaiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMHuWaiViewController.m; sourceTree = "<group>"; };
 		6A632FE91EC6D740009959C6 /* LMMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMMineViewController.h; sourceTree = "<group>"; };
 		6A632FEA1EC6D740009959C6 /* LMMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMMineViewController.m; sourceTree = "<group>"; };
+		6A798EF61EC7F628009E5FA9 /* LMMineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMMineModel.h; sourceTree = "<group>"; };
+		6A798EF71EC7F628009E5FA9 /* LMMineModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMMineModel.m; sourceTree = "<group>"; };
+		6A798EF91EC7F63D009E5FA9 /* LMCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMCollectionViewCell.h; sourceTree = "<group>"; };
+		6A798EFA1EC7F63D009E5FA9 /* LMCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMCollectionViewCell.m; sourceTree = "<group>"; };
+		6A798F001EC82FB1009E5FA9 /* LMAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMAccount.h; sourceTree = "<group>"; };
+		6A798F011EC82FB1009E5FA9 /* LMAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMAccount.m; sourceTree = "<group>"; };
+		6A798F031EC82FF9009E5FA9 /* LMAccountBaseTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMAccountBaseTopic.h; sourceTree = "<group>"; };
+		6A798F041EC82FF9009E5FA9 /* LMAccountBaseTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMAccountBaseTopic.m; sourceTree = "<group>"; };
+		6A798F081EC839A9009E5FA9 /* LMNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMNetworkManager.h; sourceTree = "<group>"; };
+		6A798F091EC839A9009E5FA9 /* LMNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMNetworkManager.m; sourceTree = "<group>"; };
+		6A798F0B1EC839C0009E5FA9 /* LHMImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHMImagePicker.h; sourceTree = "<group>"; };
+		6A798F0C1EC839C0009E5FA9 /* LHMImagePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHMImagePicker.m; sourceTree = "<group>"; };
+		6A798F0D1EC839C0009E5FA9 /* LMEditController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMEditController.h; sourceTree = "<group>"; };
+		6A798F0E1EC839C0009E5FA9 /* LMEditController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMEditController.m; sourceTree = "<group>"; };
 		6A7A06871EC2BADA00B5791B /* LMTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMTabBarController.h; sourceTree = "<group>"; };
 		6A7A06881EC2BADA00B5791B /* LMTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMTabBarController.m; sourceTree = "<group>"; };
 		6A7A068D1EC2BCD400B5791B /* LMLaunchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMLaunchViewController.h; sourceTree = "<group>"; };
@@ -136,13 +154,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		0F3A8C2A1EC4B4DE00C84379 /* Account */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Account;
-			sourceTree = "<group>";
-		};
 		0F6EF3181EC204B4002AE345 = {
 			isa = PBXGroup;
 			children = (
@@ -183,8 +194,8 @@
 		6A1D509A1EC5610F00A55D9B /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				6A1D509B1EC5611600A55D9B /* LMNetworkManager.h */,
-				6A1D509C1EC5611600A55D9B /* LMNetworkManager.m */,
+				6A798F071EC839A9009E5FA9 /* LMNetworkManager */,
+				6A798F061EC83987009E5FA9 /* LMImagePick */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -224,11 +235,60 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		6A798EF41EC7F5EE009E5FA9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6A798EF61EC7F628009E5FA9 /* LMMineModel.h */,
+				6A798EF71EC7F628009E5FA9 /* LMMineModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6A798EF51EC7F5EE009E5FA9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6A798EF91EC7F63D009E5FA9 /* LMCollectionViewCell.h */,
+				6A798EFA1EC7F63D009E5FA9 /* LMCollectionViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6A798EFF1EC82FA2009E5FA9 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				6A798F001EC82FB1009E5FA9 /* LMAccount.h */,
+				6A798F011EC82FB1009E5FA9 /* LMAccount.m */,
+				6A798F031EC82FF9009E5FA9 /* LMAccountBaseTopic.h */,
+				6A798F041EC82FF9009E5FA9 /* LMAccountBaseTopic.m */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		6A798F061EC83987009E5FA9 /* LMImagePick */ = {
+			isa = PBXGroup;
+			children = (
+				6A798F0B1EC839C0009E5FA9 /* LHMImagePicker.h */,
+				6A798F0C1EC839C0009E5FA9 /* LHMImagePicker.m */,
+				6A798F0D1EC839C0009E5FA9 /* LMEditController.h */,
+				6A798F0E1EC839C0009E5FA9 /* LMEditController.m */,
+			);
+			path = LMImagePick;
+			sourceTree = "<group>";
+		};
+		6A798F071EC839A9009E5FA9 /* LMNetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				6A798F081EC839A9009E5FA9 /* LMNetworkManager.h */,
+				6A798F091EC839A9009E5FA9 /* LMNetworkManager.m */,
+			);
+			path = LMNetworkManager;
+			sourceTree = "<group>";
+		};
 		6A7A066B1EC2BA7A00B5791B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				6A798EFF1EC82FA2009E5FA9 /* Account */,
 				6A1D509A1EC5610F00A55D9B /* Utility */,
-				0F3A8C2A1EC4B4DE00C84379 /* Account */,
 				6A7A06701EC2BA7A00B5791B /* Home */,
 				6A7A06741EC2BA7A00B5791B /* Live */,
 				6A7A06781EC2BA7A00B5791B /* Main */,
@@ -327,6 +387,8 @@
 		6A7A067E1EC2BA7A00B5791B /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				6A798EF41EC7F5EE009E5FA9 /* Model */,
+				6A798EF51EC7F5EE009E5FA9 /* View */,
 				6A632FE81EC6D72B009959C6 /* Controller */,
 			);
 			path = Mine;
@@ -484,26 +546,32 @@
 				6A1D50911EC54A5A00A55D9B /* LMRecommendViewController.m in Sources */,
 				6A632E281EC69822009959C6 /* LMLOLViewController.m in Sources */,
 				6A1D50A71EC565E800A55D9B /* LMHomeSectionModel.m in Sources */,
+				6A798EF81EC7F628009E5FA9 /* LMMineModel.m in Sources */,
 				6A632FEB1EC6D740009959C6 /* LMMineViewController.m in Sources */,
+				6A798F101EC839C0009E5FA9 /* LMEditController.m in Sources */,
 				6A632E2B1EC6983A009959C6 /* LMWangzeViewController.m in Sources */,
 				6A7A06891EC2BADA00B5791B /* LMTabBarController.m in Sources */,
 				6ABD5D041EC315BD00CBD820 /* LMNavigationViewController.m in Sources */,
 				6ABD5D011EC3139500CBD820 /* LMMyLiveViewController.m in Sources */,
+				6A798F0F1EC839C0009E5FA9 /* LHMImagePicker.m in Sources */,
 				6A1D50951EC558DA00A55D9B /* LMRecommendCollectionViewCell.m in Sources */,
 				0F3A8C281EC4B46D00C84379 /* LMHomeTitleView.m in Sources */,
 				6A632E2E1EC6984D009959C6 /* LMHuWaiViewController.m in Sources */,
 				6ABD5D071EC31C9500CBD820 /* UIView+LMAdd.m in Sources */,
 				0F6EF3291EC204B4002AE345 /* LMAppDelegate.m in Sources */,
 				6A1D50A01EC561D500A55D9B /* UIImage+LMAdd.m in Sources */,
+				6A798F0A1EC839A9009E5FA9 /* LMNetworkManager.m in Sources */,
 				0F1CDB741EC60EAC009B6F5F /* LMHomeBaseViewController.m in Sources */,
-				6A1D509D1EC5611600A55D9B /* LMNetworkManager.m in Sources */,
+				6A798EFB1EC7F63D009E5FA9 /* LMCollectionViewCell.m in Sources */,
 				0F3A8C271EC4B46D00C84379 /* LMSegmentView.m in Sources */,
 				6ABD5CF81EC3133400CBD820 /* LMHomeViewController.m in Sources */,
 				6A1D50A41EC565D800A55D9B /* LMHomeModel.m in Sources */,
 				6A7A068F1EC2BCD400B5791B /* LMLaunchViewController.m in Sources */,
 				0F6EF3261EC204B4002AE345 /* main.m in Sources */,
 				6ABD5CFB1EC3134500CBD820 /* LMLiveViewController.m in Sources */,
+				6A798F021EC82FB1009E5FA9 /* LMAccount.m in Sources */,
 				6A632E251EC69814009959C6 /* LMShowingViewController.m in Sources */,
+				6A798F051EC82FF9009E5FA9 /* LMAccountBaseTopic.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
