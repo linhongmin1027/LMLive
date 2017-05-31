@@ -8,7 +8,7 @@
 
 #import "LMAppDelegate.h"
 #import "LMLaunchViewController.h"
-
+#import <UMMobClick/MobClick.h>
 
 
 @interface LMAppDelegate ()
@@ -23,6 +23,17 @@
     _window.backgroundColor=[UIColor whiteColor];
     _window.rootViewController=[[LMLaunchViewController alloc]init];
     [_window makeKeyAndVisible];
+    
+    //友盟统计
+    UMConfigInstance.appKey=@"";
+    UMConfigInstance.channelId=@"App Store";
+    NSString *version=[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBoundleShortVersionString"];
+    [MobClick setAppVersion:version];
+    [MobClick profileSignInWithPUID:@"min"];
+    [MobClick startWithConfigure:UMConfigInstance];
+    
+    
+    
     return YES;
 }
 

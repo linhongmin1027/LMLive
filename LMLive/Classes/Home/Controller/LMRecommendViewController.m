@@ -101,7 +101,7 @@ static NSString * const RecommendCollectionCellId=@"RecommendCollectionCellId";
         
         NSArray *tempArray=object[@"ios-focus"];
         for (NSDictionary *dict in tempArray) {
-            NSString *str=dict[@"thumb"];
+          
             [self.bannerImageArray addObject:dict[@"thumb"]];
             
         }

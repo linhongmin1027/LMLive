@@ -21,7 +21,53 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupChildControllers];
- 
+    CGRect frame=self.tabBar.frame;
+    frame.size.height=100;
+    frame.origin.y=self.view.height-frame.size.height;
+    self.tabBar.frame=frame;
+    LMLog(@"tabbar.height%f",self.tabBar.frame.size.height);
+    LMLog(@"%s---%@",__func__,self.view.subviews);
+}
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    CGRect frame=self.tabBar.frame;
+    frame.size.height=100;
+    frame.origin.y=self.view.height-frame.size.height;
+    self.tabBar.frame=frame;
+    LMLog(@"%f",self.tabBar.frame.size.height);
+    LMLog(@"%s---%@",__func__,self.view.subviews);
+
+
+
+}
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    CGRect frame=self.tabBar.frame;
+    frame.size.height=100;
+    frame.origin.y=self.view.height-frame.size.height;
+    self.tabBar.frame=frame;
+    LMLog(@"%f",self.tabBar.frame.size.height);
+    LMLog(@"%s---%@",__func__,self.view.subviews);
+
+
+
+}
+-(void)viewWillLayoutSubviews{
+    [super viewWillLayoutSubviews];
+    LMLog(@"%f",self.tabBar.frame.size.height);
+    LMLog(@"%s---%@",__func__,self.view.subviews);
+    
+
+
+
+
+}
+-(void)viewDidLayoutSubviews{
+    [super viewDidLayoutSubviews];
+    LMLog(@"%f",self.tabBar.frame.size.height);
+    LMLog(@"%s---%@",__func__,self.view.subviews);
+
+
 }
 -(void)setupChildControllers{
     //首页
@@ -60,6 +106,7 @@
 
 
 }
+
 -(void)addOneChildControllerToTabBar:(UIViewController *)controller
                                title:(NSString *)title
                      normalImageName:(NSString *)normalName

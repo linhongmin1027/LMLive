@@ -60,7 +60,6 @@ static NSString *const LMCycleCollectionItemId=@"LMCycleCollectionItemId";
     _urlStringArray=urlStringArray;
     if (urlStringArray.count==0) return;
     _totalUrlCount=urlStringArray.count *100;
-    //[self.collectionView reloadData];
 
 
 
@@ -74,7 +73,8 @@ static NSString *const LMCycleCollectionItemId=@"LMCycleCollectionItemId";
         flowLayout.itemSize=CGSizeMake(kScreenWidth ,self.bounds.size.height);
        
         flowLayout.scrollDirection=UICollectionViewScrollDirectionHorizontal;
-        
+        flowLayout.minimumLineSpacing=0;
+        flowLayout.minimumInteritemSpacing=0;
         UICollectionView *collectionView=[[UICollectionView alloc]initWithFrame:self.bounds collectionViewLayout:flowLayout];
         collectionView.backgroundColor=LMWhiteColor;
         collectionView.delegate=self;

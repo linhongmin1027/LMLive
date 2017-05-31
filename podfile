@@ -10,4 +10,5 @@ target ‘LMLive’ do
   pod 'JPush'
   pod 'HyphenateLite'
   pod 'EaseUILite', :git =>'https://github.com/easemob/easeui-ios-hyphenate-cocoapods.git'
+  pod 'UMengAnalytics-NO-IDFA'
 end
